@@ -3,9 +3,12 @@ body {
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Выравниваем контент по верхнему краю */
+    min-height: 100vh;
     margin: 0;
+    padding: 20px; /* Добавляем отступы для body */
+    box-sizing: border-box; /* Учитываем padding в высоте */
+    overflow-y: auto; /* Общая прокрутка для всей страницы */
 }
 
 .container {
@@ -17,8 +20,10 @@ body {
     width: 100%;
     padding: 20px;
     box-sizing: border-box; /* Учитываем padding в ширине */
-    height: 90vh; /* Ограничиваем высоту контейнера */
-    overflow: hidden; /* Скрываем всё, что выходит за пределы */
+    background-color: #fff; /* Фон контейнера для визуального разделения */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+    overflow: hidden; /* Убираем выход контента за пределы контейнера */
 }
 
 .controls {
@@ -80,6 +85,7 @@ body {
     margin-top: 20px;
     overflow-y: auto; /* Добавляем прокрутку для списка вопросов */
     flex-grow: 1; /* Занимаем оставшееся пространство */
+    box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
 .question-list h3 {
