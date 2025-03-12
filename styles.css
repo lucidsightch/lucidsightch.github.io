@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    height: 90vh; /* Ограничиваем высоту контейнера */
+    overflow: hidden; /* Скрываем всё, что выходит за пределы */
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0; /* Запрещаем сжимание */
+}
+
+#questionButton {
+    margin-bottom: 20px;
+}
+
+#questionDisplay {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: pre-wrap; /* Сохраняем переносы строк */
+    word-wrap: break-word; /* Переносим длинные слова */
+    flex-shrink: 0; /* Запрещаем сжимание */
+}
+
+.answer-blocks {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+    flex-shrink: 0; /* Запрещаем сжимание */
+}
+
+.answer-block {
+    width: 30%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    text-align: left; /* Выравниваем текст по левому краю */
+    opacity: 1;
+    transition: opacity 0.3s;
+    white-space: pre-wrap; /* Сохраняем переносы строк */
+    word-wrap: break-word; /* Переносим длинные слова */
+    flex-shrink: 0; /* Запрещаем сжимание */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    line-height: 1.5; /* Устанавливаем межстрочный интервал */
+}
+
+.answer-block:hover {
+    opacity: 0.8;
+}
+
+.question-list {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    overflow-y: auto; /* Добавляем прокрутку для списка вопросов */
+    flex-grow: 1; /* Занимаем оставшееся пространство */
+}
+
+.question-list h3 {
+    margin-bottom: 10px;
+}
+
+.question-list label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+}
